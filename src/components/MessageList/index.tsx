@@ -33,6 +33,8 @@ export function MessageList(): JSX.Element {
         messagesQueue.shift()
       }
     }, 3000)
+
+    return () => clearInterval(timer)
   }, [])
 
   useEffect(() => {

@@ -47,22 +47,26 @@ export function MessageList(): JSX.Element {
     <div className={styles.messageListWrapper}>
       <img src={logo} alt="DoWhile 2021" />
       <ul className={styles.messageList}>
-        {messages.map((message) => {
-          return (
-            <li className={styles.message} key={message.id}>
-              <p className={styles.messageContent}>{message.text}</p>
-              <div className={styles.messageUser}>
-                <div className={styles.userImage}>
-                  <img
-                    src={`${message.user.avatar_url}`}
-                    alt={`${message.user.name}`}
-                  />
+        {messages.length > 0 ? (
+          messages.map((message) => {
+            return (
+              <li className={styles.message} key={message.id}>
+                <p className={styles.messageContent}>{message.text}</p>
+                <div className={styles.messageUser}>
+                  <div className={styles.userImage}>
+                    <img
+                      src={`${message.user.avatar_url}`}
+                      alt={`${message.user.name}`}
+                    />
+                  </div>
+                  <span>{message.user.name}</span>
                 </div>
-                <span>{message.user.name}</span>
-              </div>
-            </li>
-          )
-        })}
+              </li>
+            )
+          })
+        ) : (
+          <li>Ainda não há mensagens sobre o evento!</li>
+        )}
       </ul>
     </div>
   )

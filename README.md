@@ -1,4 +1,4 @@
-<h1 align="center">Dowhile 2021 - Back-end</h1>
+<h1 align="center">Dowhile 2021 - Front-end</h1>
 
 <p align="center">
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -30,7 +30,9 @@ This project was developed with the following technologies:
 - Install the dependencies with `yarn`;
 - Start the server with `yarn dev`;
 
-The application can be accessed at [`localhost:3000`](http://localhost:3000) or you can access the live application [`here`]().
+The application can be accessed at [`localhost:3000`](http://localhost:3000)
+
+You can access the live web application [`clicking here`](https://dowhile-front.vercel.app/).
 
 ## 📄 License
 

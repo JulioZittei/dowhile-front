@@ -15,7 +15,7 @@ type Message = {
 
 const messagesQueue: Message[] = []
 
-const socket = io(`${import.meta.env.VITE_API_BASE_URL}`)
+const socket = io("http://localhost:4000")
 
 socket.on("new_message", (newMessage: Message) => {
   messagesQueue.push(newMessage)

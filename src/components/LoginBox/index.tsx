@@ -1,10 +1,10 @@
-import { useContext } from "react"
-import { VscGithubInverted } from "react-icons/vsc"
-import { AuthContext } from "../../contexts/auth"
-import styles from "./styles.module.scss"
+import { useContext } from 'react';
+import { VscGithubInverted } from 'react-icons/vsc';
+import { AuthContext } from '../../contexts/auth';
+import styles from './styles.module.scss';
 
 export function LoginBox(): JSX.Element {
-  const { signInUrl, user } = useContext(AuthContext)
+  const { signInUrl } = useContext(AuthContext);
 
   return (
     <div className={styles.loginBoxWrapper}>
@@ -14,5 +14,5 @@ export function LoginBox(): JSX.Element {
         Entrar com Github
       </a>
     </div>
-  )
+  );
 }

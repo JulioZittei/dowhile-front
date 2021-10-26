@@ -1,22 +1,22 @@
-import { FormEvent, useContext, useState } from "react"
-import { VscGithubInverted, VscSignOut } from "react-icons/vsc"
-import { AuthContext } from "../../contexts/auth"
-import { api } from "../../services/api"
-import styles from "./styles.module.scss"
+import { FormEvent, useContext, useState } from 'react';
+import { VscGithubInverted, VscSignOut } from 'react-icons/vsc';
+import { AuthContext } from '../../contexts/auth';
+import { api } from '../../services/api';
+import styles from './styles.module.scss';
 
 export function SendMessageForm(): JSX.Element {
-  const { signOut, user } = useContext(AuthContext)
-  const [message, setMessage] = useState("")
+  const { signOut, user } = useContext(AuthContext);
+  const [message, setMessage] = useState('');
 
   async function handleSendMessage(event: FormEvent) {
-    event.preventDefault()
+    event.preventDefault();
 
     if (!message.trim()) {
-      return
+      return;
     }
 
-    await api.post("messages", { message })
-    setMessage("")
+    await api.post('messages', { message });
+    setMessage('');
   }
 
   return (
@@ -49,5 +49,5 @@ export function SendMessageForm(): JSX.Element {
         <button type="submit">Enviar mensagem</button>
       </form>
     </div>
-  )
+  );
 }
